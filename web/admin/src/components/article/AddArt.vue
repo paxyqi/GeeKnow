@@ -84,7 +84,7 @@ export default {
           { required: true, message: '请输入文章描述', trigger: 'change' },
           { max: 120, message: '描述最多可写120个字符', trigger: 'change' },
         ],
-        // img: [{ required: true, message: '请选择文章缩略图', trigger: 'change' }],
+        img: [{ required: false, message: '请选择文章缩略图', trigger: 'change' }],
         content: [{ required: true, message: '请输入文章内容', trigger: 'change' }],
       },
     }

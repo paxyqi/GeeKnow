@@ -1,11 +1,11 @@
 <template>
   <a-card>
     <a-form-model labelAlign="left" :label-col="{ span: 2 }" :wrapper-col="{ span: 12 }">
-      <a-form-model-item label="作者名称">
+      <a-form-model-item label="联系我们">
         <a-input style="width: 300px" v-model="profileInfo.name"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="个人简介">
+      <a-form-model-item label="平台简介">
         <a-input type="textarea" v-model="profileInfo.desc"></a-input>
       </a-form-model-item>
 
@@ -13,23 +13,23 @@
         <a-input style="width: 300px" v-model="profileInfo.icp_record"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="QQ号码">
+      <a-form-model-item label="客服QQ">
         <a-input style="width: 300px" v-model="profileInfo.qq_chat"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="微信">
+      <a-form-model-item label="客服微信">
         <a-input style="width: 300px" v-model="profileInfo.wechat"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="微博">
+      <a-form-model-item label="关注微博">
         <a-input style="width: 300px" v-model="profileInfo.weibo"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="B站地址">
+      <a-form-model-item label="关注B站">
         <a-input style="width: 300px" v-model="profileInfo.bili"></a-input>
       </a-form-model-item>
 
-      <a-form-model-item label="Email">
+      <a-form-model-item label="小编Email">
         <a-input style="width: 300px" v-model="profileInfo.email"></a-input>
       </a-form-model-item>
 

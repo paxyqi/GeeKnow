@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto" max-width="320">
-    <v-img :src="profileInfo.img">
+    <!-- <v-img :src="profileInfo.img">
       <v-card-title>
         <v-col align="center">
           <v-avatar size="130" color="grey">
@@ -10,9 +10,9 @@
         </v-col>
       </v-card-title>
       <v-divider></v-divider>
-    </v-img>
+    </v-img> -->
 
-    <v-card-title>About Me:</v-card-title>
+    <v-card-title>联系我们:</v-card-title>
     <v-card-text>{{profileInfo.desc}}</v-card-text>
 
     <v-divider color="indigo"></v-divider>

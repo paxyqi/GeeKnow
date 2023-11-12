@@ -1,7 +1,7 @@
 <template >
   <a-layout-sider breakpoint="lg" v-model="collapsed">
     <div class="log">
-      <span>{{ collapsed ? 'Blog' : 'My Blog' }}</span>
+      <span>{{ collapsed ? 'Blog' : '后台管理' }}</span>
     </div>
 
     <a-menu theme="dark" mode="inline" @click="goToPage">
@@ -40,7 +40,7 @@
 
       <a-menu-item key="profile">
         <a-icon type="setting" />
-        <span>个人设置</span>
+        <span>联系我们</span>
       </a-menu-item>
     </a-menu>
   </a-layout-sider>

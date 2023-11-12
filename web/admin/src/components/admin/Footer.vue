@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <span>---- GinBlog Admin ----</span>
+    <span>---- GeeKnow Admin ----</span>
   </div>
 </template>
 

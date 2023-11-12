@@ -160,9 +160,9 @@ code {
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: rgba(27, 31, 35, 0.05);
+  background-color: rgba(99, 118, 138, 0.05);
   border-left-width: 0.5rem;
   border-left-style: solid;
-  border-color: #303f9f;
+  border-color: #535b8e;
 }
 </style>
