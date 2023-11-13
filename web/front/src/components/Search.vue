@@ -90,21 +90,7 @@ export default {
       this.artList = res.data
       this.total = res.total
       this.isLoad = true
-    },
-    async getArtListbyTag() {
-      const { data: res } = await this.$http.get('article/tag',
-          {
-            params: {
-              tag: this.tag,
-              pagesize: this.queryParam.pagesize,
-              pagenum: this.queryParam.pagenum
-            }
-          }
-        )
-        this.artList = res.data
-        this.total = res.total
-        this.isLoad = true
-      }
+    }
   }
 }
 </script>

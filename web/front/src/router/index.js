@@ -9,7 +9,8 @@ const Category = () =>
   import(/* webpackChunkName: "group-category" */ '../components/CateList.vue')
 const Search = () =>
   import(/* webpackChunkName: "group-search" */ '../components/Search.vue')
-
+const SearchTag = () =>
+  import(/* webpackChunkName: "group-searchTag" */ '../components/SearchTag.vue')
 Vue.use(VueRouter)
 
 //获取原型对象上的push函数
@@ -41,8 +42,8 @@ const routes = [
   },
   {
     path: '/search/tag/:tag',
-    component: Search,
-    meta: { tag: '搜索结果' },
+    component: SearchTag,
+    meta: { title: '搜索结果' },
     props: true
   }
 ]
