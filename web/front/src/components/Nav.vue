@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto" max-width="320">
-    <!-- <v-img :src="profileInfo.img">
+    <v-img :src="profileInfo.img">
       <v-card-title>
         <v-col align="center">
           <v-avatar size="130" color="grey">
@@ -10,7 +10,7 @@
         </v-col>
       </v-card-title>
       <v-divider></v-divider>
-    </v-img> -->
+    </v-img>
 
     <v-card-title>联系我们:</v-card-title>
     <v-card-text>{{profileInfo.desc}}</v-card-text>
@@ -52,6 +52,7 @@
         </v-list-item-icon>
         <v-list-item-content class="grey--text">{{profileInfo.email}}</v-list-item-content>
       </v-list-item>
+
     </v-list>
   </v-card>
 </template>
