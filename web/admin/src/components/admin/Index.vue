@@ -33,7 +33,7 @@ export default {
         }
       ],
       pieName: [],
-      myChartStyle: { float: "left", width: "100%", height: "500px" } //图表样式
+      myChartStyle: { float: "left", width: "100%", height: "600px" } //图表样式
     };
   },
   mounted() {
@@ -71,7 +71,7 @@ export default {
               show: true,
               formatter: "{b} : {c} ({d}%)" // b代表名称，c代表对应值，d代表百分比
             },
-            radius: "30%", //饼图半径
+            radius: "50%", //饼图半径
             data: this.pieData
           }
         ]

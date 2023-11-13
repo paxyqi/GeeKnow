@@ -73,11 +73,30 @@ func SearchArticle(title string, pageSize int, pageNum int) ([]Article, int, int
 	var err error
 	var total int64
 	err = db.Select("article.id,title, img, created_at, updated_at, `desc`, comment_count, read_count, Category.name").Order("Created_At DESC").Joins("Category").Where("title LIKE ?",
-		title+"%",
+		"%"+title+"%",
 	).Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&articleList).Error
 	//单独计数
 	db.Model(&articleList).Where("title LIKE ?",
-		title+"%",
+		"%"+title+"%",
+	).Count(&total)
+
+	if err != nil {
+		return nil, errmsg.ERROR, 0
+	}
+	return articleList, errmsg.SUCCSE, total
+}
+
+// SearchTag 搜索文章自定义描述
+func SearchTag(tag string, pageSize int, pageNum int) ([]Article, int, int64) {
+	var articleList []Article
+	var err error
+	var total int64
+	err = db.Select("article.id,title, img, created_at, updated_at, `desc`, comment_count, read_count, Category.name").Order("Created_At DESC").Joins("Category").Where("desc LIKE ?",
+		"%"+tag+"%",
+	).Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&articleList).Error
+	//单独计数
+	db.Model(&articleList).Where("desc LIKE ?",
+		"%"+tag+"%",
 	).Count(&total)
 
 	if err != nil {

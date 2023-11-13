@@ -38,6 +38,12 @@ const routes = [
     component: Search,
     meta: { title: '搜索结果' },
     props: true
+  },
+  {
+    path: '/search/tag/:tag',
+    component: Search,
+    meta: { tag: '搜索结果' },
+    props: true
   }
 ]
 

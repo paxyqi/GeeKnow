@@ -1,7 +1,7 @@
 <template >
   <a-layout-sider breakpoint="lg" v-model="collapsed">
     <div class="log">
-      <span>{{ collapsed ? 'Blog' : '后台管理' }}</span>
+      <span>{{ collapsed ? 'GeeK' : '后台管理' }}</span>
     </div>
 
     <a-menu theme="dark" mode="inline" @click="goToPage">
@@ -65,7 +65,7 @@ export default {
 .log {
   height: 32px;
   margin: 16px;
-  background-color: #fff;
+  background-color: rgb(84, 104, 126);
   display: flex;
   justify-content: center;
   align-items: center;

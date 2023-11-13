@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/gin-contrib/multitemplate"
 	"github.com/gin-gonic/gin"
-	"github.com/wejectchen/ginblog/api/v1"
+	v1 "github.com/wejectchen/ginblog/api/v1"
 	"github.com/wejectchen/ginblog/middleware"
 	"github.com/wejectchen/ginblog/utils"
 )
@@ -90,6 +90,7 @@ func InitRouter() {
 
 		// 文章模块
 		router.GET("article", v1.GetArt)
+		router.GET("article/tag", v1.GetTag)
 		router.GET("article/list/:id", v1.GetCateArt)
 		router.GET("article/info/:id", v1.GetArtInfo)
 

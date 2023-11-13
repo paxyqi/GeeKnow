@@ -31,8 +31,8 @@
           placeholder="按照作者自定义查找"
           dark
           append-icon="mdi-text-search"
-          v-model="searchName"
-          @change="searchTitle(searchName)"
+          v-model="searchTag"
+          @change="searchDIY(searchTag)"
         ></v-text-field>
       </v-responsive>
 
@@ -221,6 +221,11 @@ export default {
       if (title.length == 0) return this.$message.error('你还没填入搜索内容哦')
       this.$router.push(`/search/${title}`)
     },
+    // 查找文章简介
+    searchDIY(tag) {
+      if (tag.length == 0) return this.$message.error('你还没填入搜索内容哦')
+      this.$router.push(`/search/tag/${tag}`)
+    },
 
     gotoCate(cid) {
       this.$router.push(`/category/${cid}`).catch((err) => err)
@@ -262,4 +267,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .v-responsive{
+    margin: 10px;
+  }
+</style>
